@@ -1,0 +1,240 @@
+:root[data-theme="dark"] {
+    --bg:         #111111;
+    --bg-header:  #0a0a0a;
+    --surface:    #1a1a1a;
+    --border:     #2a2a2a;
+    --text:       #e8e8e8;
+    --text-muted: #888888;
+    --accent:     #c8b8a2;
+  }
+  
+  :root[data-theme="light"] {
+    --bg:         #f5f4f0;
+    --bg-header:  #eceae4;
+    --surface:    #ffffff;
+    --border:     #dddbd4;
+    --text:       #1a1a1a;
+    --text-muted: #666666;
+    --accent:     #7a6a5a;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--bg);
+    color: var(--text);
+  }
+  
+  header {
+    width: 100%;
+    background-color: var(--bg-header);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 8px;
+  }
+  
+  nav a {
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--text-muted);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+  
+  nav a:hover {
+    color: var(--text);
+    border-color: var(--accent);
+    background-color: var(--surface);
+  }
+  
+
+  #theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  #theme-toggle:hover {
+    border-color: var(--accent);
+    background-color: var(--surface);
+  }
+  
+
+  main {
+    width: 100%;
+  }
+  
+  #sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    padding: 60px 20px 40px;
+    text-align: center;
+  }
+  
+  .foto-perfil {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border);
+    margin-bottom: 28px;
+  }
+  
+  #sobre h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  
+  .subtitulo {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  
+  .descricao {
+    max-width: 560px;
+    font-size: 0.975rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--text-muted);
+    margin-bottom: 0;
+  }
+
+  .scroll-hint {
+    margin-top: 48px;
+  }
+  
+  .seta {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(6px); }
+  }
+
+  #secao2 {
+    min-height: 100vh;
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+#contatos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 57px);
+  gap: 12px;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.email {
+  font-size: clamp(1.4rem, 4vw, 2.6rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.contato-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+}
+
+.contato-link:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+#secao2 {
+  min-height: 40vh;
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#secao2 h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+#secao2 ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 640px;
+}
+
+#secao2 li {
+  font-size: 0.975rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+#secao2 li strong {
+  color: var(--text);
+  font-weight: 600;
+}
